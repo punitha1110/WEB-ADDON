@@ -36,26 +36,18 @@ class Student {
 public class StudentManagement {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-
             System.out.println("--- Enter Details for Student ---");
-
             System.out.print("Enter Student Name: ");
             String name = in.nextLine();
-
             System.out.print("Enter marks for Subject 1: ");
             int mark1 = in.nextInt();
-
             System.out.print("Enter marks for Subject 2: ");
             int mark2 = in.nextInt();
-
             System.out.print("Enter marks for Subject 3: ");
             int mark3 = in.nextInt();
-
-
             Student s = new Student(name, mark1, mark2, mark3);
             s.displayDetails();
-            
-            in.close();
+             in.close();
      }
 
     }
