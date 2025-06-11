@@ -7,7 +7,7 @@ class display extends Student {
         System.out.println("Hello");
     }
 }
-class Main {
+class AbstractClass {
     public static void main(String[] args) {
        display d=new display();
        d.m1();
