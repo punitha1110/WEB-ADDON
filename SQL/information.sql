@@ -21,7 +21,7 @@ mysql> create table future(
     -> );
 Query OK, 0 rows affected (0.10 sec)
 
-mysql> insert into future values('Taeshi', 95,'taeshi@gmail.com',30121995,'Bighit');
+mysql> insert into future values('punitha', 01 ,'punitha@gmail.com',30121995,'Bsc');
 Query OK, 1 row affected (0.04 sec)
 
 mysql> select *
@@ -30,14 +30,14 @@ mysql> select *
 +--------+-------+------------------+----------+--------+
 | fname  | froll | femail           | fnum     | fdep   |
 +--------+-------+------------------+----------+--------+
-| Taeshi |    95 | taeshi@gmail.com | 30121995 | Bighit |
+| punitha |   01 | punitha@gmail.com | 30121995 | Bsc |
 +--------+-------+------------------+----------+--------+
 1 row in set (0.03 sec)
 
-mysql> insert into future values('Kookie',97,'kook@gmail.com',01091997,'Bighit');
+mysql> insert into future values('adam', 02 ,'adam@gmail.com',01091997,'Bca');
 Query OK, 1 row affected (0.05 sec)
 
-mysql> insert into future values('Mochi',96,'mochi@gmail.com',13101995,'Bighit');
+mysql> insert into future values('david', 03 ,'david@gmail.com',13101995,'Ba');
 Query OK, 1 row affected (0.04 sec)
 
 mysql> select *
@@ -45,9 +45,9 @@ mysql> select *
 +--------+-------+------------------+----------+--------+
 | fname  | froll | femail           | fnum     | fdep   |
 +--------+-------+------------------+----------+--------+
-| Taeshi |    95 | taeshi@gmail.com | 30121995 | Bighit |
-| Kookie |    97 | kook@gmail.com   |  1091997 | Bighit |
-| Mochi  |    96 | mochi@gmail.com  | 13101995 | Bighit |
+| punitha |    01 | punitha@gmail.com | 30121995 | Bsc |
+| adam    |    02 | adam@gmail.com    |  1091997 | Bca |
+| david   |    03 | david@gmail.com   | 13101995 | Ba  |
 +--------+-------+------------------+----------+--------+
 3 rows in set (0.00 sec)
 
@@ -76,9 +76,9 @@ mysql> select * from future;
 +--------+-------+------------------+----------+--------+--------+
 | fname  | froll | femail           | fnum     | fdep   | course |
 +--------+-------+------------------+----------+--------+--------+
-| Taeshi |    95 | taeshi@gmail.com | 30121995 | Bighit | NULL   |
-| Kookie |    97 | kook@gmail.com   |  1091997 | Bighit | NULL   |
-| Mochi  |    96 | mochi@gmail.com  | 13101995 | Bighit | NULL   |
+| punitha |    01 | punitha@gmail.com | 30121995 | Bsc | NULL   |
+| adam    |    02 | adam@gmail.com    |  1091997 | Bca | NULL   |
+| david   |    03 | david@gmail.com   | 13101995 | Ba  | NULL   |
 +--------+-------+------------------+----------+--------+--------+
 3 rows in set (0.00 sec)
 
@@ -92,20 +92,20 @@ mysql> select * from future;
 +--------+-------+------------------+----------+--------+--------+
 | fname  | froll | femail           | fnum     | fdep   | course |
 +--------+-------+------------------+----------+--------+--------+
-| Taeshi |    95 | taeshi@gmail.com | 30121995 | Bighit | Singer |
-| Kookie |    97 | kook@gmail.com   |  1091997 | Bighit | Singer |
-| Mochi  |    96 | mochi@gmail.com  | 13101995 | Bighit | Singer |
+| punitha |    01 | punitha@gmail.com | 30121995 | Bsc | Singer  |
+| adam    |    02 | adam@gmail.com    |  1091997 | Bca | Singer  |
+| david   |    03 | david@gmail.com   | 13101995 | Ba  | Singer  |
 +--------+-------+------------------+----------+--------+--------+
 3 rows in set (0.00 sec)
 
 mysql> update future set coure="Singer"
-    -> where froll=97;
+    -> where froll=01;
 ERROR 1054 (42S22): Unknown column 'coure' in 'field list'
 mysql> update future set coure="Dancer"
-    -> where froll=96;
+    -> where froll=02;
 ERROR 1054 (42S22): Unknown column 'coure' in 'field list'
 mysql> update future set course="Dancer"
-    -> where froll=96;
+    -> where froll=03;
 Query OK, 1 row affected (0.05 sec)
 Rows matched: 1  Changed: 1  Warnings: 0
 
@@ -113,14 +113,14 @@ mysql> select * from future;
 +--------+-------+------------------+----------+--------+--------+
 | fname  | froll | femail           | fnum     | fdep   | course |
 +--------+-------+------------------+----------+--------+--------+
-| Taeshi |    95 | taeshi@gmail.com | 30121995 | Bighit | Singer |
-| Kookie |    97 | kook@gmail.com   |  1091997 | Bighit | Singer |
-| Mochi  |    96 | mochi@gmail.com  | 13101995 | Bighit | Dancer |
+| punitha |    01 | punitha@gmail.com | 30121995 | Bsc | Singer  |
+| adam    |    02 | adam@gmail.com    |  1091997 | Bca | Singer  |
+| david   |    03 | david@gmail.com   | 13101995 | Ba  | Dancer  |
 +--------+-------+------------------+----------+--------+--------+
 3 rows in set (0.00 sec)
 
 mysql> update future set course="Multi"
-    -> where froll=97;
+    -> where froll=02;
 Query OK, 1 row affected (0.03 sec)
 Rows matched: 1  Changed: 1  Warnings: 0
 
@@ -128,8 +128,8 @@ mysql> select * from future;
 +--------+-------+------------------+----------+--------+--------+
 | fname  | froll | femail           | fnum     | fdep   | course |
 +--------+-------+------------------+----------+--------+--------+
-| Taeshi |    95 | taeshi@gmail.com | 30121995 | Bighit | Singer |
-| Kookie |    97 | kook@gmail.com   |  1091997 | Bighit | Multi  |
-| Mochi  |    96 | mochi@gmail.com  | 13101995 | Bighit | Dancer |
+| punitha |    01 | punitha@gmail.com | 30121995 | Bsc | Singer  |
+| adam    |    02 | adam@gmail.com    |  1091997 | Bca | Multi  |
+| david   |    03 | david@gmail.com   | 13101995 | Ba  | Dancer  |
 +--------+-------+------------------+----------+--------+--------+
 3 rows in set (0.00 sec)
