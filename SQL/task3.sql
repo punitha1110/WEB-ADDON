@@ -1,20 +1,6 @@
 mysql> use wed;
 Database changed
-mysql> create table student(
-    -> sname varchar(60);
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2
-mysql> create table student(
-    -> sname varchar(60)
-    -> smark int
-    -> );
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'smark int
-)' at line 3
-mysql> create table student(
-    -> sname varchar(60)
-    -> smark int
-    -> );
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'smark int
-)' at line 3
+
 mysql> create table student(
     -> sname varchar(60),
     -> smark int
@@ -40,26 +26,26 @@ mysql> select *from student;
 +----------+-------+
 | sname    | smark |
 +----------+-------+
-| sree     |    85 |
-| varshini |    80 |
-| tharu    |    89 |
-| semma    |    79 |
-| neena    |    60 |
+| adam     |    85 |
+| david    |    80 |
+| zarin    |    89 |
+| sara     |    79 |
+| rina     |    60 |
 +----------+-------+
 5 rows in set (0.00 sec)
 
 mysql> delete from student
-    -> where sname='semma';
+    -> where sname='sara';
 Query OK, 1 row affected (0.05 sec)
 
 mysql> select *from student;
 +----------+-------+
 | sname    | smark |
 +----------+-------+
-| sree     |    85 |
-| varshini |    80 |
-| tharu    |    89 |
-| neena    |    60 |
+| adam     |    85 |
+| david    |    80 |
+| zarin    |    89 |
+| rina     |    60 |
 +----------+-------+
 4 rows in set (0.00 sec)
 
@@ -73,10 +59,11 @@ mysql> select *from student;
 +----------+-------+
 | sname    | smark |
 +----------+-------+
-| sree     |    85 |
-| varshini |    80 |
-| tharu    |    89 |
-| neena    |    60 |
+| adam     |    85 |
+| david    |    80 |
+| zarin    |    89 |
+| sara     |    79 |
+| rina     |    60 |
 | sreena   |    70 |
 | nithran  |    90 |
 +----------+-------+
@@ -89,10 +76,10 @@ mysql> select *from student
     -> where smark>=80;
 +----------+-------+
 | sname    | smark |
-+----------+-------+
-| sree     |    85 |
-| varshini |    80 |
-| tharu    |    89 |
++----------+-------+   
+| adam     |    85 |
+| david    |    80 |
+| zarin    |    89 |
 | nithran  |    90 |
 +----------+-------+
 4 rows in set (0.00 sec)
@@ -183,7 +170,7 @@ mysql> insert into book values('Paradise','^C;
 mysql> insert into book values('paradise','John Milton');
 Query OK, 1 row affected (0.04 sec)
 
-mysql> insert into book values('Train to Pakistan','Khushwant Singh');
+mysql> insert into book values('The fly','Khushwant Singh');
 Query OK, 1 row affected (0.06 sec)
 
 mysql> select *from book;
@@ -193,7 +180,7 @@ mysql> select *from book;
 | Pride             | Prejudice           |
 | Hamlet            | William Shakespeare |
 | paradise          | John Milton         |
-| Train to Pakistan | Khushwant Singh     |
+| The fly           | Khushwant Singh     |
 +-------------------+---------------------+
 4 rows in set (0.00 sec)
 
@@ -210,11 +197,11 @@ mysql> select bname
 
 mysql> select bname
     -> from book
-    -> where bname like '%n';
+    -> where bname like '%y';
 +-------------------+
 | bname             |
 +-------------------+
-| Train to Pakistan |
+| The fly           |
 +-------------------+
 1 row in set (0.00 sec)
 
