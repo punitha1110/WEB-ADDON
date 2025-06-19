@@ -1,4 +1,4 @@
-TASK 3
+
 mysql> create table Course(
     -> Coursefee int
     -> );
