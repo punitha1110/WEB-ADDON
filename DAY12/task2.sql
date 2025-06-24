@@ -11,7 +11,7 @@ public class InsertStudent {
 
         // Sample student data
         int id = 1;
-        String name = "John Doe";
+        String name = "punitha";
         int age = 20;
 
         String sql = "INSERT INTO students (id, name, age) VALUES (?, ?, ?)";
