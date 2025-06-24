@@ -1,3 +1,5 @@
+CREATE AND CONNECT JAVA TO MYSQL(JDBC):
+
 package Mysqlprogram;
 import java.sql.*;
 public class JDBC {
